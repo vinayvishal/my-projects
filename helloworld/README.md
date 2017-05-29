@@ -1,4 +1,5 @@
-# An enterprise application consisting of one or more web module and EJBs.The application intends to validate the context-path of the bundled web module when deployed on Glassfish in various scenarios.
+# Description
+An enterprise application consisting of one or more web module and EJBs.The application intends to validate the context-path of the bundled web module when deployed on Glassfish in various scenarios.
 
 ## Scenario 1 
 The enterprise application contains a single web module and no context-path has been specified.
