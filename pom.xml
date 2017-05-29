@@ -56,5 +56,6 @@
     </dependencyManagement>
     <modules>
         <module>helloworld</module>
+        <module>webapp</module>
     </modules>
 </project>
