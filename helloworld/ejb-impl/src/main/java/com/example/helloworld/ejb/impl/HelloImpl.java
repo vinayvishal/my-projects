@@ -9,4 +9,9 @@ public class HelloImpl implements Hello {
     public String hello() {
         return "Hello World!";
     }
+
+    @Override
+    public String helloAgain() {
+        return "Hello World Again!!!";
+    }
 }
