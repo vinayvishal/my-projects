@@ -2,16 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    
     <parent>
-        <artifactId>samples</artifactId>
-        <groupId>com.example</groupId>
+        <artifactId>ears</artifactId>
+        <groupId>com.example.ears</groupId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.example.helloworld</groupId>
-    <artifactId>helloworld</artifactId>
+    <groupId>com.example.ears.context_root</groupId>
+    <artifactId>context-root</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -28,19 +27,19 @@
                 <configuration>
                     <modules>
                         <jarModule>
-                            <groupId>com.example.helloworld</groupId>
+                            <groupId>com.example.ears.context_root.ejb_api</groupId>
                             <artifactId>ejb-api</artifactId>
                         </jarModule>
                         <ejbModule>
-                            <groupId>com.example.helloworld</groupId>
+                            <groupId>com.example.ears.context_root.ejb_impl</groupId>
                             <artifactId>ejb-impl</artifactId>
                         </ejbModule>
                         <webModule>
-                            <groupId>com.example.helloworld</groupId>
+                            <groupId>com.example.ears.context_root.war</groupId>
                             <artifactId>hello</artifactId>
                         </webModule>
 			<webModule>
-                            <groupId>com.example.helloworld</groupId>
+                            <groupId>com.example.ears.context_root.war2</groupId>
                             <artifactId>hello2</artifactId>
                         </webModule>		
                     </modules>
@@ -48,5 +47,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
