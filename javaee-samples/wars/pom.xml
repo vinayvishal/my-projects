@@ -14,5 +14,6 @@
     <groupId>com.example.wars</groupId>
 <modules>
         <module>context-root</module>
+        <module>jndi</module> 
     </modules>
 </project>
