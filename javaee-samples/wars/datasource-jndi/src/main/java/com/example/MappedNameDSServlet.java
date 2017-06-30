@@ -7,9 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.annotation.WebServlet;
-import java.io.IOException;
-
+import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -17,16 +15,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-import javax.sql.DataSource;
 
+@WebServlet("/mappeddsservlet")
+public class MappedNameDSServlet extends HttpServlet {
 
-@WebServlet("/defaultservlet")
-public class DSServlet extends HttpServlet {
-
-    @Resource
+    @Resource(mappedName = "java:comp/env/com.example.DSServlet/ds")
     private DataSource ds;
 
     @Override
@@ -44,7 +37,7 @@ public class DSServlet extends HttpServlet {
 
             PrintWriter out = resp.getWriter();
             resp.setContentType("text/html");
-            out.print("<html><body><h2>Employee Details</h2>");
+            out.print("<html><body><h2>Employee Details fetched through mapped resource</h2>");
             out.print("<table border=\"1\" cellspacing=10 cellpadding=5>");
             out.print("<th>Employee Name</th>");
             out.print("<th>Employee Org</th>");
