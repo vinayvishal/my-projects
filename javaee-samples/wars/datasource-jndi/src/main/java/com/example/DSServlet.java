@@ -26,7 +26,7 @@ import javax.sql.DataSource;
 @WebServlet("/")
 public class DSServlet extends HttpServlet {
 
-    @Resource(mappedName = "jdbc/__default")
+    @Resource(lookup = "jdbc/__default")
     private DataSource ds;
 
     @Override
