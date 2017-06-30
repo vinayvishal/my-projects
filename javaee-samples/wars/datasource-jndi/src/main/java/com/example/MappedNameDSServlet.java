@@ -19,7 +19,7 @@ import java.sql.Statement;
 @WebServlet("/mappeddsservlet")
 public class MappedNameDSServlet extends HttpServlet {
 
-    @Resource(mappedName = "java:comp/env/com.example.DSServlet/ds")
+    @Resource(mappedName = "java:comp/env/MyDS")
     private DataSource ds;
 
     @Override

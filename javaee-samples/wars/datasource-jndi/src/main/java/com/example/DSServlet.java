@@ -26,7 +26,7 @@ import javax.sql.DataSource;
 @WebServlet("/defaultservlet")
 public class DSServlet extends HttpServlet {
 
-    @Resource
+    @Resource(name = "MyDS")
     private DataSource ds;
 
     @Override
