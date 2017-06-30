@@ -24,9 +24,9 @@ public class DatabaseSetup {
         
         executeUpdate(dataSource, "CREATE TABLE employee (name VARCHAR(64) PRIMARY KEY, org VARCHAR(64))");
         
-        executeUpdate(dataSource, "INSERT INTO employee VALUES('mohan', 'oracle')");
-        executeUpdate(dataSource, "INSERT INTO employee VALUES('rohan', 'oracle')");
-        executeUpdate(dataSource, "INSERT INTO employee VALUES('sohan', 'oracle')");
+        executeUpdate(dataSource, "INSERT INTO employee VALUES('Mohan', 'oracle')");
+        executeUpdate(dataSource, "INSERT INTO employee VALUES('Sohan', 'oracle')");
+        executeUpdate(dataSource, "INSERT INTO employee VALUES('Rohan', 'oracle')");
     }
     
     @PreDestroy
