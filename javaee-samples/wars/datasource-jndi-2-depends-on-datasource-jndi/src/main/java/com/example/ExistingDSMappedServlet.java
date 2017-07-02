@@ -37,7 +37,7 @@ public class ExistingDSMappedServlet extends HttpServlet {
 
             PrintWriter out = resp.getWriter();
             resp.setContentType("text/html");
-            out.print("<html><body><h2>Employee Details fetched through pre-existing mapped resource</h2>");
+            out.print("<html><body><h2>Employee Details fetched through existing mapped resource</h2>");
             out.print("<table border=\"1\" cellspacing=10 cellpadding=5>");
             out.print("<th>Employee Name</th>");
             out.print("<th>Employee Org</th>");
