@@ -1,8 +1,9 @@
 package com.example.helloworld.ejb.impl;
 
 import com.example.helloworld.ejb.api.Hello;
+import javax.ejb.Stateless;
 
-
+@Stateless
 public class HelloImpl implements Hello {
     
     @Override

@@ -13,6 +13,10 @@
     <artifactId>ejb-impl</artifactId>
     <groupId>com.example.ears.ejb_name_validation.ejb_impl</groupId>
     <dependencies>
+	<dependency>
+            <groupId>javax.ejb</groupId>
+            <artifactId>javax.ejb-api</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.example.ears.ejb_name_validation.ejb_api</groupId>
             <artifactId>ejb-api</artifactId>
