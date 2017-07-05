@@ -4,10 +4,10 @@
 	<disable-nonportable-jndi-names>false</disable-nonportable-jndi-names>
 	<enterprise-beans>
 		<ejb>
-			<ejb-name>HelloImpl</ejb-name>
+			<ejb-name>helloEjbAnnotationName</ejb-name>
 			<jndi-name>ejb/com_example_ejb_name_validation_hello</jndi-name>
 			<ejb-ref>
-				<ejb-ref-name>ejb/hello</ejb-ref-name>
+				<ejb-ref-name>ejb/helloEjbAnnotationName</ejb-ref-name>
 				<jndi-name>ejb/com_example_ejb_name_validation_hello</jndi-name>
 			</ejb-ref>
 
