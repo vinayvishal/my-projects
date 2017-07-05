@@ -23,7 +23,7 @@ public class HelloServlet extends HttpServlet {
 //    @EJB(beanName = "HelloImpl2")
 //    private Hello descriptorHello2;
 
-    @EJB(lookup = "com_example_ejb_name_validation_hello")
+    @EJB(lookup = "ejb/com_example_ejb_name_validation_hello")
     private Hello subEjbDescriptorHello1;
 
 
