@@ -12,5 +12,14 @@
 			</ejb-ref>
 
 		</ejb>
+		<ejb>
+			<ejb-name>HelloImpl2</ejb-name>
+			<jndi-name>ejb/com_example_ejb_name_validation_hello2</jndi-name>
+			<ejb-ref>
+				<ejb-ref-name>ejb/HelloImpl2</ejb-ref-name>
+				<jndi-name>ejb/com_example_ejb_name_validation_hello2</jndi-name>
+			</ejb-ref>
+
+		</ejb>
 	</enterprise-beans>
 </sun-ejb-jar>
