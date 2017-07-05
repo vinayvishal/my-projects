@@ -9,12 +9,12 @@
             <ejb-class>com.example.helloworld.ejb.impl.HelloImpl</ejb-class>
             <session-type>Stateless</session-type>
         </session>
-        <session>
+        <!--session>
             <ejb-name>HelloImpl2</ejb-name>
             <business-local>com.example.helloworld.ejb.api.Hello</business-local>
             <ejb-class>com.example.helloworld.ejb.impl.HelloImpl</ejb-class>
             <session-type>Stateless</session-type>
-        </session>
+        </session-->
         <session>
             <ejb-name>GreeterEJB</ejb-name>
             <ejb-class>com.example.helloworld.ejb.impl.GreeterImpl</ejb-class>

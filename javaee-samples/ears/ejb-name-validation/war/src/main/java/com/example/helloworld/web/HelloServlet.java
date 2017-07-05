@@ -16,6 +16,9 @@ public class HelloServlet extends HttpServlet {
     @EJB
     private Hello defaultHello;
 
+    @EJB(beanName = "helloEjbAnnotationName")
+    private Hello annotatedHello;
+
     @EJB(beanName = "HelloImpl")
     private Hello descriptorHello1;
 
@@ -30,8 +33,9 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().write("DefaultHello -->" + defaultHello.hello() + "\n");
+        resp.getWriter().write("AnnotatedHello -->" + defaultHello.hello() + "\n");
         resp.getWriter().write("DescriptorHello1 -->" + descriptorHello1.hello() + "\n");
-        resp.getWriter().write("DescriptorHello2 -->" + descriptorHello2.hello() + "\n");
+//        resp.getWriter().write("DescriptorHello2 -->" + descriptorHello2.hello() + "\n");
 //        resp.getWriter().write("sunEjbDescriptorHello1 -->" + subEjbDescriptorHello1.hello() + "\n");
 
     }
