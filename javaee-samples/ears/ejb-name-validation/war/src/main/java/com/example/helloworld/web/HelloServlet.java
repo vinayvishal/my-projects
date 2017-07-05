@@ -23,8 +23,8 @@ public class HelloServlet extends HttpServlet {
 //    @EJB(beanName = "HelloImpl2")
 //    private Hello descriptorHello2;
 
-//    @EJB(lookup = "com_example_ejb_name_validation_hello")
-//    private Hello subEjbDescriptorHello1;
+    @EJB(lookup = "com_example_ejb_name_validation_hello")
+    private Hello subEjbDescriptorHello1;
 
 
     @Override
@@ -32,7 +32,7 @@ public class HelloServlet extends HttpServlet {
         resp.getWriter().write("DefaultHello -->" + defaultHello.hello() + "\n");
         resp.getWriter().write("DescriptorHello1 -->" + descriptorHello1.hello() + "\n");
 //        resp.getWriter().write("DescriptorHello2 -->" + descriptorHello2.hello() + "\n");
-//        resp.getWriter().write("sunEjbDescriptorHello1 -->" + subEjbDescriptorHello1.hello() + "\n");
+        resp.getWriter().write("sunEjbDescriptorHello1 -->" + subEjbDescriptorHello1.hello() + "\n");
 
     }
 }
