@@ -8,12 +8,20 @@
             <business-local>com.example.helloworld.ejb.api.Hello</business-local>
             <ejb-class>com.example.helloworld.ejb.impl.HelloImpl</ejb-class>
             <session-type>Stateless</session-type>
+            <message-destination-ref>
+                <message-destination-ref-name>myQueue</message-destination-ref-name>
+                <lookup-name>jms/myQueue</lookup-name>
+            </message-destination-ref>
         </session>
         <session>
             <ejb-name>helloThereAgain</ejb-name>
             <business-local>com.example.helloworld.ejb.api.Hello</business-local>
             <ejb-class>com.example.helloworld.ejb.impl.HelloImpl</ejb-class>
             <session-type>Stateless</session-type>
+            <message-destination-ref>
+                <message-destination-ref-name>myQueue</message-destination-ref-name>
+                <lookup-name>jms/mySecondQueue</lookup-name>
+            </message-destination-ref>
         </session>
         <session>
             <ejb-name>GreeterEJB</ejb-name>

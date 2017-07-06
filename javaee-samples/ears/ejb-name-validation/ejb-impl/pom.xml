@@ -17,6 +17,11 @@
             <groupId>javax.ejb</groupId>
             <artifactId>javax.ejb-api</artifactId>
         </dependency>
+	<dependency>
+    <groupId>javax.jms</groupId>
+    <artifactId>javax.jms-api</artifactId>
+</dependency>
+
         <dependency>
             <groupId>com.example.ears.ejb_name_validation.ejb_api</groupId>
             <artifactId>ejb-api</artifactId>
