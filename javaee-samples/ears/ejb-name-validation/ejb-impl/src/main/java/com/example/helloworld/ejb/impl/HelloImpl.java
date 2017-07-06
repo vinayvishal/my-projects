@@ -9,7 +9,10 @@ import javax.jms.Queue;
 @Stateless
 public class HelloImpl implements Hello {
 
-    @Resource(name="myQueue")
+    // A jms queue resource should be pre-configured and bound to jndi name:
+    // java:comp/env/com.example.helloworld.ejb.impl.HelloImpl/queue1
+    
+    @Resource
     private javax.jms.Queue queue1;
     
     @Override
@@ -17,8 +20,4 @@ public class HelloImpl implements Hello {
         return "Hello World!";
     }
 
-    @Override
-    public String helloAgain() {
-        return "Hello World Again!!!";
-    }
 }

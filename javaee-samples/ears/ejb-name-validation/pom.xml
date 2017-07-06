@@ -18,7 +18,6 @@
         <module>ejb-api</module>
         <module>ejb-impl</module>
         <module>war</module>
-	<module>war2</module>
     </modules>
     <build>
         <plugins>
@@ -38,10 +37,6 @@
                             <groupId>com.example.ears.ejb_name_validation.war</groupId>
                             <artifactId>hello</artifactId>
                         </webModule>
-			<webModule>
-                            <groupId>com.example.ears.ejb_name_validation.war2</groupId>
-                            <artifactId>hello2</artifactId>
-                        </webModule>		
                     </modules>
                 </configuration>
             </plugin>
