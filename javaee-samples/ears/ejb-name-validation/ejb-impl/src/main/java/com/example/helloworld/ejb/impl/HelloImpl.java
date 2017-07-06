@@ -11,8 +11,8 @@ public class HelloImpl implements Hello {
 
     // A jms queue resource should be pre-configured and bound to jndi name:
     // java:comp/env/com.example.helloworld.ejb.impl.HelloImpl/queue1
-    
-    @Resource
+
+    @Resource(name = "myQueue")
     private javax.jms.Queue queue1;
     
     @Override
