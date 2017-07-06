@@ -1,6 +1,5 @@
 package com.example.helloworld.web2;
 
-import com.example.helloworld.ejb.api.Greeter;
 import com.example.helloworld.ejb.api.Hello;
 
 import javax.ejb.EJB;
@@ -13,11 +12,12 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/")
 public class HelloServlet2 extends HttpServlet {
-    @EJB (beanName = "greeter")
-    private Greeter greeter;
+
+    @EJB(lookup = "java:global/helloworld/ejb-impl-1.0-SNAPSHOT/HelloImpl")
+    private Hello hello;
     
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().write(greeter.greet());
+        resp.getWriter().write(hello.helloAgain());
     }
 }

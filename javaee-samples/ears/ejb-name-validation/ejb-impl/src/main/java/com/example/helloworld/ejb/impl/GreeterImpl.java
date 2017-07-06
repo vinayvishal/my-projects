@@ -12,11 +12,12 @@ import javax.ejb.Stateless;
 @Stateless(name = "greeter")
 public class GreeterImpl implements Greeter {
 
-    @EJB(beanName = "helloThere")
+    @EJB(beanName = "HelloImpl")
     private Hello helloEjbJar;
 
     public String greet(){
-        return "Greeting" + helloEjbJar.hello();
+        return "Greeting from a bean having beanName as HelloImpl, " +
+                "this is default and hasn't been defined in any of the descriptor" + helloEjbJar.hello();
     }
 }
 
