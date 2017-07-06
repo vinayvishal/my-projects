@@ -12,7 +12,7 @@ import javax.ejb.Stateless;
 @Stateless(name = "greeter")
 public class GreeterImpl implements Greeter {
 
-    @EJB(beanName = "HelloImpl")
+    @EJB(beanName = "helloThere")
     private Hello helloEjbJar;
 
     public String greet(){

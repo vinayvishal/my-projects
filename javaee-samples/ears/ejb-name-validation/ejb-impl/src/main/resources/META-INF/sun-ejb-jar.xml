@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sun-ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD GlassFish Application Server 3.0 EJB 3.1//EN" "http://www.sun.com/software/appserver/dtds/sun-ejb-jar_3_1-0.dtd">
 <sun-ejb-jar>
-	<disable-nonportable-jndi-names>false</disable-nonportable-jndi-names>
 	<enterprise-beans>
-		<ejb>
+		<!--ejb>
 			<ejb-name>helloEjbAnnotationName</ejb-name>
 			<jndi-name>ejb/com_example_ejb_name_validation_hello</jndi-name>
 			<ejb-ref>
@@ -11,15 +10,14 @@
 				<jndi-name>ejb/com_example_ejb_name_validation_hello</jndi-name>
 			</ejb-ref>
 
-		</ejb>
+		</ejb-->
 		<ejb>
-			<ejb-name>HelloImpl2</ejb-name>
-			<jndi-name>ejb/com_example_ejb_name_validation_hello2</jndi-name>
-			<ejb-ref>
-				<ejb-ref-name>ejb/HelloImpl2</ejb-ref-name>
-				<jndi-name>ejb/com_example_ejb_name_validation_hello2</jndi-name>
-			</ejb-ref>
-
+			<ejb-name>helloThere</ejb-name>
+			<jndi-name>ejb/com_example_ejb_name_validation_hello</jndi-name>
+			<!--ejb-ref>
+				<ejb-ref-name>ejb/HelloImpl</ejb-ref-name>
+				<jndi-name>ejb/com_example_ejb_name_validation_hello</jndi-name>
+			</ejb-ref-->
 		</ejb>
 	</enterprise-beans>
 </sun-ejb-jar>

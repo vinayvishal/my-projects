@@ -3,7 +3,7 @@ package com.example.helloworld.ejb.impl;
 import com.example.helloworld.ejb.api.Hello;
 import javax.ejb.Stateless;
 
-@Stateless(name="helloEjbAnnotationName")
+@Stateless
 public class HelloImpl implements Hello {
     
     @Override
