@@ -16,10 +16,14 @@
         @EJB(beanName = "HelloImpl")
         private Hello defaultHello;
 
+        @EJB(beanName = "myEJB")
+        private Hello myHello;
+
 
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             resp.getWriter().write("DefaultHello -->" + defaultHello.hello() + "\n");
+            resp.getWriter().write("MyHello -->" + myHello.hello() + "\n");
         }
     }
 

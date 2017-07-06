@@ -13,5 +13,15 @@
                 <lookup-name>myQueue</lookup-name>
             </message-destination-ref>
         </session>
+        <session>
+            <ejb-name>myEJB</ejb-name>
+            <business-local>com.example.helloworld.ejb.api.Hello</business-local>
+            <ejb-class>com.example.helloworld.ejb.impl.HelloImpl</ejb-class>
+            <session-type>Stateless</session-type>
+            <message-destination-ref>
+                <message-destination-ref-name>myQueue</message-destination-ref-name>
+                <lookup-name>myQueue</lookup-name>
+            </message-destination-ref>
+        </session>
     </enterprise-beans>
 </ejb-jar>
