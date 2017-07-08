@@ -15,5 +15,6 @@
 <modules>
         <module>context-root</module>
         <module>datasource-jndi</module>
+        <module>default-context-path</module>
     </modules>
 </project>

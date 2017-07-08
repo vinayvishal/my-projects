@@ -2,21 +2,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    
     <parent>
-        <artifactId>javaee-samples</artifactId>
-        <groupId>com.example</groupId>
+        <artifactId>wars</artifactId>
+        <groupId>com.example.wars</groupId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>ears</artifactId>
-    <groupId>com.example.ears</groupId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>context-root</module>
-	<module>ejb-name-validation</module>
-	<module>default-context-path</module>
-    </modules>
+    <packaging>war</packaging>
+    <artifactId>helloworld</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+        </dependency>
+    </dependencies>
 </project>
