@@ -10,14 +10,11 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>ears</artifactId>
-    <groupId>com.example.ears</groupId>
+    <artifactId>ejbs</artifactId>
+    <groupId>com.example.ejbs</groupId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>context-root</module>
-	<module>ejb-name-validation</module>
-	<module>default-context-path</module>
-        <module>cdi-injection-existing-ejb</module>
+	<module>reference-ejb</module>
     </modules>
 </project>

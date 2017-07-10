@@ -70,5 +70,6 @@
     <modules>
         <module>wars</module>
         <module>ears</module>
+        <module>ejbs</module>
     </modules>
 </project>
