@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ejb-mappedname-validation</artifactId>
+        <groupId>com.example.ears.ejb_mappedname_validation</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>ejb</packaging>
+    <artifactId>ejb-impl</artifactId>
+    <groupId>com.example.ears.ejb_mappedname_validation.ejb_impl</groupId>
+    <dependencies>
+	<dependency>
+            <groupId>javax.ejb</groupId>
+            <artifactId>javax.ejb-api</artifactId>
+        </dependency>
+	<dependency>
+    <groupId>javax.jms</groupId>
+    <artifactId>javax.jms-api</artifactId>
+</dependency>
+
+        <dependency>
+            <groupId>com.example.ears.ejb_mappedname_validation.ejb_api</groupId>
+            <artifactId>ejb-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    
+</project>
