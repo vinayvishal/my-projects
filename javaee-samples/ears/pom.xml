@@ -16,5 +16,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>context-root</module>
+	<module>ejb-name-validation</module>
+	<module>default-context-path</module>
+        <module>cdi-injection-existing-ejb</module>
     </modules>
 </project>

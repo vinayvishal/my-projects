@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>SampleOsgiApp</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>SampleOsgiApp Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+<properties>
+   <jetty-plugin-version>6.1.10</jetty-plugin-version>
+   <maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
+   <java.version>1.8</java.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>servlet-api</artifactId>
+    <version>2.5</version>
+</dependency>
+  </dependencies>
+  <build>
+    <finalName>SampleOsgiApp</finalName>
+  <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.0.0</version>
+      </plugin>
+ <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <version>${jetty-plugin-version}</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <connectors>
+                        <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                            <port>8080</port>
+                            <maxIdleTime>60000</maxIdleTime>
+                        </connector>
+                    </connectors>
+                </configuration>
+            </plugin>
+<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+<!--plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-scr-plugin</artifactId>
+        <version>1.20.0</version>
+        <executions>
+          <execution>
+            <id>generate-scr-scrdescriptor</id>
+            <goals>
+              <goal>scr</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin-->
+<plugin>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>maven-bundle-plugin</artifactId>
+            <extensions>true</extensions>
+            <executions>
+                <execution>
+                    <id>bundle-manifest</id>
+                    <phase>process-classes</phase>
+                    <goals>
+                        <goal>manifest</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <supportedProjectTypes>
+                    <supportedProjectType>war</supportedProjectType>
+                </supportedProjectTypes>
+                <manifestLocation>./src/main/webapp/META-INF</manifestLocation>
+                <instructions>
+                    <Import-Package>javax.servlet;version="3.1.0",javax.servlet.http;version="3.1.0",org.osgi.framework</Import-Package>
+                    <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                    <Bundle-ClassPath>.,WEB-INF/classes,{maven-dependencies}</Bundle-ClassPath>
+                    <Embed-Directory>WEB-INF/lib</Embed-Directory>
+                    <Embed-Dependency>*;scope=compile|runtime;</Embed-Dependency>
+                    <Embed-Transitive>true</Embed-Transitive>
+                    <Web-ContextPath>/hello</Web-ContextPath>
+                    <Webapp-Context>hello</Webapp-Context>
+                    <Service-Component>OSGI-INF/sample.xml</Service-Component> 
+                </instructions>
+            </configuration>
+        </plugin>
+</plugins>
+
+  </build>
+
+</project>
+

@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 @Startup
 public class DatabaseSetup {
     
-    @Resource(lookup="java:comp/DefaultDataSource")	
+    @Resource(lookup="java:comp/DefaultDataSource")
     private DataSource dataSource;
 
     @PostConstruct
@@ -24,9 +24,9 @@ public class DatabaseSetup {
         
         executeUpdate(dataSource, "CREATE TABLE employee (name VARCHAR(64) PRIMARY KEY, org VARCHAR(64))");
         
-        executeUpdate(dataSource, "INSERT INTO employee VALUES('mohan', 'oracle')");
-        executeUpdate(dataSource, "INSERT INTO employee VALUES('rohan', 'oracle')");
-        executeUpdate(dataSource, "INSERT INTO employee VALUES('sohan', 'oracle')");
+        executeUpdate(dataSource, "INSERT INTO employee VALUES('Foo1', 'oracle')");
+        executeUpdate(dataSource, "INSERT INTO employee VALUES('Bar', 'oracle')");
+        executeUpdate(dataSource, "INSERT INTO employee VALUES('Alex', 'oracle')");;
     }
     
     @PreDestroy

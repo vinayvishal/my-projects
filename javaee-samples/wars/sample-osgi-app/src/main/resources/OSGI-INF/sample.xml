@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="example.component" immediate="true">
+  <implementation class="com.example.SampleComparator" />
+  <property name="service.description" value="Sample Comparator Service" />
+  <property name="service.vendor" value="Apache Software Foundation" />
+  <service>
+    <provide interface="java.util.Comparator" />
+  </service>
+</component>
